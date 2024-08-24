@@ -1,0 +1,7 @@
+#1
+Styles are scoped to the component that they are defined in.
+
+<style scoped>
+</style>
+
+#2
