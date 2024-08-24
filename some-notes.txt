@@ -5,3 +5,20 @@ Styles are scoped to the component that they are defined in.
 </style>
 
 #2
+Scripts are scoped to the component that they are defined in. Always use <script setup></script> instead of <script></script> for scripts.
+
+<script setup></script>
+
+#3
+
+Slot is like a placeholder for the content that will be inserted into the component. Similar to React's {children}.
+
+<div>
+    <slot></slot>
+</div>
+
+#4
+
+import { ref } from "vue";
+
+In Vue 3, ref is used to create reactive references to data. It allows you to track and react to changes in simple values like strings, numbers, or objects. When the value of a ref changes, Vue automatically updates the DOM or any other reactive parts of your application that depend on that value.
