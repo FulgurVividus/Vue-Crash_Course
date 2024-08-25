@@ -22,3 +22,48 @@ Slot is like a placeholder for the content that will be inserted into the compon
 import { ref } from "vue";
 
 In Vue 3, ref is used to create reactive references to data. It allows you to track and react to changes in simple values like strings, numbers, or objects. When the value of a ref changes, Vue automatically updates the DOM or any other reactive parts of your application that depend on that value.
+
+#5
+
+:limit="3"
+
+- Without the colon (e.g., limit="3"), Vue would treat "3" as a string.
+- With the colon (e.g., :limit="3"), Vue evaluates the expression, treating it as a number, object, or any other data type.
+
+#6
+
+npm i vue-router
+
+#7
+
+router folder => index.js Is for routing.
+
+#8
+
+import { RouterView } from "vue-router";
+
+Is like React's <Outlet />. 
+
+#9
+
+reactive() only takes objects. It does not take primitives like strings, number and booleans. It uses 'ref()' under the hood.
+
+ref() can take objects or primitives.
+
+ref() has a '.value' property for reassigning, 'reactive()' does not use '.value' and cannot be reassigned.
+
+#10
+
+The line is used to access the current route's information within the component. This is essential for obtaining dynamic route parameters, query strings, and other details related to the current route.
+
+import { useRoute } from "vue-router";
+const route = useRoute();
+const jobId = route.someParam;
+
+#11
+
+The line is used to access the Vue Router instance in your component, which allows you to programmatically navigate to different routes or perform navigation-related actions.
+
+import { useRouter } from "vue-router";
+const router = useRouter();
+router.push("/some-route");
